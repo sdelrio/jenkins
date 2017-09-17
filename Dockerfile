@@ -1,7 +1,7 @@
 FROM jenkins/jenkins:alpine
 
-ENV TIMESTAMP=20170917
-ENV VERSION=0.9
+ENV TIMESTAMP 20170917
+ENV VERSION 0.9
 
 # For jenkins backup script
 USER root
