@@ -1,3 +1,4 @@
+![](https://travis-ci.org/sdelrio/jenkins.svg?branch=master)
 
 Jenkins master docker installation with base plugins and no wizard
 
