@@ -1,0 +1,16 @@
+credentials
+script-security
+slack
+workflow-aggregator
+git-client
+pipeline-utility-steps
+git
+github
+swarm
+blueocean
+ec2
+thinBackup
+github-oauth
+s3
+aws-bucket-credentials
+role-strategy
