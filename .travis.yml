@@ -26,7 +26,8 @@ jobs:
       fi
   - stage: test
     script:
-    - docker run -p 8080:8080 --name jenkins -td $IMAGENAME 
+    - IMAGENAME=sdelrio/jenkins
+    - docker run -p 8080:8080 --name jenkins -td $IMAGENAME
     - sleep 10
     - curl -s -w "%{http_code}" http://localhost:8080/jenkins/ -o /dev/null | grep -q 200
     - docker stop jenkins
