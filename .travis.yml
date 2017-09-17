@@ -31,3 +31,5 @@ jobs:
     - curl -s -w "%{http_code}" http://localhost:8080 -o /dev/null) != "200"
     - docker stop jenkins
     - docker rm -f jenkins
+    - docker system prune -f
+
