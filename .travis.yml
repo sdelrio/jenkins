@@ -28,7 +28,7 @@ jobs:
     script:
     - docker run -p 8080:8080 -td $IMAGENAME jenkins
     - sleep 10
-    - curl -s -w "%{http_code}" http://localhost:8080 -o /dev/null) != "200"
+    - curl -s -w "%{http_code}" http://localhost:8080/jenkins/ -o /dev/null | grep -q 200
     - docker stop jenkins
     - docker rm -f jenkins
     - docker system prune -f
