@@ -29,7 +29,8 @@ jobs:
     - IMAGENAME=sdelrio/jenkins
     - docker run -p 8080:8080 --name jenkins -td $IMAGENAME
     - sleep 60
-    - docker logs jenkins
+    - docker logs jenkins | grep -q "Jenkins is fully up and running"
+    - sleep 30
     - curl -s -w "%{http_code}" http://localhost:8080/jenkins/ -o /dev/null
 #    - curl -s -w "%{http_code}" http://localhost:8080/jenkins/ -o /dev/null | grep -q 200
     - docker stop jenkins
