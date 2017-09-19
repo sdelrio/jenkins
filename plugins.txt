@@ -16,3 +16,4 @@ aws-bucket-credentials
 role-strategy
 ldap
 slack-uploader
+docker-plugin
