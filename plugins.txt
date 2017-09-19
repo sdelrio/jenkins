@@ -15,3 +15,4 @@ s3
 aws-bucket-credentials
 role-strategy
 ldap
+slack-uploader
