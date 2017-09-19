@@ -14,3 +14,4 @@ github-oauth
 s3
 aws-bucket-credentials
 role-strategy
+ldap
