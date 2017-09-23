@@ -9,6 +9,7 @@ services:
       - 8080:8080
     environment:
       - JENKINS_OPTS="--prefix=/jenkins"
+      - JENKINS_MASTER_EXECUTORS=1
     volumes:
       - jm:/var/jenkins_home
       - jmshare:/usr/share/jenkins/ref
@@ -22,6 +23,21 @@ services:
       - jenkins-user
       - jenkins-pass
 
+  swarm-agent:
+    image: vfarcic/jenkins-swarm-agent
+    environment:
+      - USER_NAME_SECRET=/run/secrets/${JENKINS_USER_SECRET:-jenkins-user}
+      - PASSWORD_SECRET=/run/secrets/${JENKINS_PASS_SECRET:-jenkins-pass}
+      - COMMAND_OPTIONS=-master http://${JENKINS_IP}/jenkins -labels 'docker' -labels 'intel' -executors 2 -name 'local-agent'
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - workspace:/workspace
+    secrets:
+      - jenkins-user
+      - jenkins-pass
+    deploy:
+      mode: global
+
 secrets:
   jenkins-user:
     external: true
@@ -31,4 +47,5 @@ secrets:
 volumes:
   jm:
   jmshare:
+  workspace:
 

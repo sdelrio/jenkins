@@ -11,9 +11,6 @@ blueocean
 ec2
 thinBackup
 github-oauth
-s3
-aws-bucket-credentials
 role-strategy
 ldap
-slack-uploader
 docker-plugin
