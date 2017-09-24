@@ -9,6 +9,19 @@ Jenkins master docker installation with base plugins and no wizard
   - `jenkins-user` (`echo "myuser" | docker secret create jenkins-user -`)
   - `jenkins-pass` (`echo "mypass" | docker secret create jenkins-pass -`)
 
+## Docker Environment vars
+
+- `JENKINS_MASTER_EXECUTORS`: Set number of executors on Master.
+
+## Docker Secrets
+
+- `jenkins-user`: Jenkins Master admin user.
+- `jenkins-pass`: Jenkins Master admin password.
+
+## Plugins
+
+Docker build will add the listed on file `plugins.txt`.
+
 # `jenkins-local.yml`
 
 - Deploy stack
