@@ -14,3 +14,4 @@ github-oauth
 role-strategy
 ldap
 docker-plugin
+build-timestamp
