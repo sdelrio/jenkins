@@ -1,5 +1,5 @@
-FROM jenkins/jenkins:2.73.3-alpine
-ENV VERSION 2.73.3
+FROM jenkins/jenkins:2.89.2-alpine
+ENV VERSION 2.89.2
 
 # Whether to skip setup wizard
 ENV JAVA_OPTS="-Djenkins.install.runSetupWizard=false"
