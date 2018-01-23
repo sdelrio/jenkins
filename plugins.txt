@@ -16,3 +16,4 @@ ldap
 docker-plugin
 build-timestamp
 filesystem_scm
+timestamper
