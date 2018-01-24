@@ -17,3 +17,4 @@ docker-plugin
 build-timestamp
 filesystem_scm
 timestamper
+gitlab-plugin
