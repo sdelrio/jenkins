@@ -1,4 +1,4 @@
-![](https://travis-ci.org/sdelrio/jenkins.svg?branch=master)
+[![Build Status](https://travis-ci.org/sdelrio/jenkins.svg?branch=master)](https://travis-ci.org/sdelrio/jenkins)
 
 Jenkins master docker installation with base plugins and no wizard
 
